@@ -22,7 +22,7 @@ mongoose.connect("mongodb+srv://omkar:OMKAR@cluster0.duiwp6o.mongodb.net/Product
    .catch((err) => console.log(err));
 
 
-
+//http://localhost:5000/product
 app.use("/product",productRoute);
 
 app.listen(5000,function(){

@@ -3,7 +3,7 @@ const mongoose=require("mongoose");
 const bodyParser=require("body-parser");
 const productRoute=require("./routes/products");
 const DB = process.env.DATABASE;
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5000;
 
 
 const app=express();
@@ -28,5 +28,5 @@ mongoose.connect(DB, {
 app.use("/product",productRoute);
 
 app.listen(PORT,function(){
-  console.log('Server has started at port ${PORT}'');
+  console.log('Server has started at port ');
 })

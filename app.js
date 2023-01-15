@@ -2,6 +2,8 @@ const express=require("express");
 const mongoose=require("mongoose");
 const bodyParser=require("body-parser");
 const productRoute=require("./routes/products");
+const DB = process.env.DATABASE;
+const PORT = process.env.PORT || 5000
 
 
 const app=express();
@@ -14,7 +16,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 
-mongoose.connect("mongodb+srv://omkar:OMKAR@cluster0.duiwp6o.mongodb.net/ProductAPI", {
+mongoose.connect(DB, {
       useNewUrlParser: true,
       useUnifiedTopology: true
  })
@@ -25,6 +27,6 @@ mongoose.connect("mongodb+srv://omkar:OMKAR@cluster0.duiwp6o.mongodb.net/Product
 //http://localhost:5000/product
 app.use("/product",productRoute);
 
-app.listen(5000,function(){
-  console.log("Server has started at port 5000");
+app.listen(PORT,function(){
+  console.log('Server has started at port ${PORT}'');
 })

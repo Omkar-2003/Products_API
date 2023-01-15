@@ -155,6 +155,8 @@ router.put("/", async (req, res) => {
 
 });
 
+//Delete Route to Delete  a  particular product
+
 router.delete("/", async (req, res) => {
   const Product_id = req.body.Productid;
 

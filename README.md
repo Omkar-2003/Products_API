@@ -5,7 +5,9 @@ Stepwise Guide :
 
 step 1 : Add required node modules like express , body-parser, mongoose 
 
-step 2 : Follow Postman Documentation precisely
+step 2 : start a server using cmd "nodemon app.js"/"node app.js"
+
+step 3 : Follow Postman Documentation precisely
 
 Postman Documentation link :- https://documenter.getpostman.com/view/21887155/2s8ZDSdR8F
 

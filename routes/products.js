@@ -1,6 +1,9 @@
 const router = require("express").Router();
 const Product = require("../models/Product");
 
+
+
+//Get rouute for Get all products and Get products which are less than certain value and greater than certain value
 router.get("/", async (req, res) => {
 
   const priceLess = req.body.lessthan;
@@ -80,7 +83,7 @@ router.get("/featured", async (req, res) => {
 
 });
 
-
+//Post Route to create a new product
 router.post("/", async (req, res) => {
 
   const Product_id = req.body.Productid;
@@ -122,6 +125,8 @@ router.post("/", async (req, res) => {
 
 });
 
+
+//Put Route to Update a information of particular product
 router.put("/", async (req, res) => {
   const Product_id = req.body.Productid;
 
